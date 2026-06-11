@@ -1,0 +1,288 @@
+/* Reset dasar browser agar tidak ada margin bawaan */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ================= DESAIN HEADER / NAVBAR ================= */
+.navbar {
+  background-color: #c2e2b7; /* Warna hijau muda sesuai screenshot */
+  display: flex;
+  justify-content: space-between; /* Memisah logo di kiri, menu di kanan */
+  align-items: center;
+  padding: 15px 5%;
+  position: sticky; /* Membuat navbar tetap di atas saat di-scroll */
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px; /* Atur tinggi logo */
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+.green-text {
+  color: #10b981; /* Warna hijau untuk tulisan STYLE */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Jarak antar menu */
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  color: #059669; /* Warna hijau gelap saat aktif/di-hover */
+  font-weight: bold;
+}
+
+.account-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ================= DESAIN HERO SECTION (TENGAH) ================= */
+.hero {
+  /* Memakai linear-gradient transparan di atas gambar agar teks lebih terbaca */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 70px); /* Memenuhi layar dikurangi tinggi navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #111111;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+
+.green-highlight {
+  color: #10b981;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #444444;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Tombol Mulai Cari Style */
+.btn-search {
+  display: inline-block;
+  background: linear-gradient(to right, #10b981, #059669);
+  color: white;
+  padding: 14px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-search:hover {
+  transform: translateY(-3px); /* Efek melayang sedikit saat di-hover */
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+}
+
+/* ================= DESAIN FOOTER ================= */
+.footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* Pengaturan Halaman Katalog */
+.katalog-content {
+  padding: 40px 5%;
+  background-color: #f9fbf7; /* Warna latar belakang putih tulang agak kehijauan */
+}
+
+/* Navigasi Lokal */
+.katalog-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.btn-subnav {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #059669;
+  border: 2px solid #059669;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-subnav:hover {
+  background-color: #059669;
+  color: white;
+}
+
+.separator {
+  border: 0;
+  height: 1px;
+  background: #cbd5e1;
+  margin: 40px 0;
+}
+
+/* Judul Seksi */
+.section-katalog {
+  margin-bottom: 60px;
+  scroll-margin-top: 90px; /* Jarak scroll agar tidak tertutup navbar yang sticky */
+}
+
+.section-title {
+  font-size: 28px;
+  color: #111;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Layout Grid Otomatis (Sangat Responsive!) */
+.grid-katalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Desain Kartu (Card) */
+.card-katalog {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Preview Warna */
+.color-preview {
+  height: 120px;
+  width: 100%;
+}
+
+/* Preview Gambar Baju */
+.image-preview {
+  height: 180px;
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.katalog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar gambar pas di dalam kotak tanpa gepeng */
+}
+
+.card-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.label-palette {
+  font-size: 14px;
+  font-weight: bold;
+  color: #64748b;
+  margin-bottom: 5px;
+}
+
+/* Badges untuk warna palet */
+.palette-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #cbd5e1;
+}
+
+/* List Kombinasi Baju */
+.combo-list {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: #334155;
+  font-size: 15px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Efek interaktif saat kartu disorot mouse */
+.card-katalog:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
