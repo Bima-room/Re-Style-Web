@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.text())
       .then((data) => {
         navbarContainer.innerHTML = data;
-        aturMenuAktif(); // Menyalakan fungsi penanda halaman aktif
-      });
+      })
+      .catch((err) => console.log("Gagal memuat navbar:", err));
   }
 
   // 2. Panggil dan Masukkan Footer
@@ -17,18 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.text())
       .then((data) => {
         footerContainer.innerHTML = data;
-      });
+      })
+      .catch((err) => console.log("Gagal memuat footer:", err));
   }
 });
-
-// Fungsi otomatis untuk mendeteksi halaman mana yang sedang aktif
-function aturMenuAktif() {
-  const lokasiHalaman = window.location.pathname;
-
-  if (lokasiHalaman.includes("katalog.html")) {
-    document.getElementById("nav-katalog").classList.add("active");
-  } else {
-    // Default jika di halaman utama/beranda
-    document.getElementById("nav-beranda").classList.add("active");
-  }
-}
