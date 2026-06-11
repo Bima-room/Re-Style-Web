@@ -13,34 +13,7 @@
     />
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo-area">
-        <img src="assets/logo.png" alt="Logo RE:STYLE" class="logo-img" />
-        <span class="logo-text"><span class="green-text">RE:STYLE</span></span>
-      </div>
-
-      <nav class="nav-links">
-        <a href="index.html" class="nav-item active">Beranda</a>
-        <a href="katalog.html" class="nav-item">Katalog</a>
-        <a href="#" class="nav-item account-menu">
-          <span>Account</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="user-icon"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-            />
-          </svg>
-        </a>
-      </nav>
-    </header>
+    <header id="navbar-component" class="navbar"></header>
 
     <main class="hero">
       <div class="hero-content">
@@ -57,8 +30,8 @@
       </div>
     </main>
 
-    <footer class="footer">
-      <p>&copy; 2026 RE:STYLE Kelompok VGK. All Rights Reserved.</p>
-    </footer>
+    <footer id="footer-component" class="footer"></footer>
+
+    <script src="component-loader.js"></script>
   </body>
 </html>
